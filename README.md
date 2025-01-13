@@ -1,3 +1,5 @@
-# DoorsV3
+# Credits #
 
-https://github.com/Eazvy/UILibs/tree/main/Librarys - look 4 what library u want (MAKE SURE IT WORKS & HAS TOGGLE COMPALIBLITY I SUGGEST GAY PRIDE FLAG AS THE GUI:)) Uwuware On top BTW
+Main Coders: GDC (Gen Digital Coding), Lunar, & KodexSploits
+Head Coders: PhantomWare, Kore, Lunar, KodexSploits, MoreCheatz, Vxly_x, & Russo-German Alliance Of Exploiting© (Lunar, KodexSploits, MoreCheatz, Kore, Vxly_x/Vxly, & PhantomWare)
+Partnered Coders: Russo-German Alliance Of Exploiting (Lunar, KodexSploits, MoreCheatz, Kore, Vxly_x/Vxly, & PhantomWare), & Kardin_Howng/SmartLightYear
