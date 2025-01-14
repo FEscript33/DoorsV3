@@ -14,7 +14,7 @@ addlabel("Right CTRL or Button to Toggle", "Tutorial")
 addlabel("All Scripts Verified Safe", "Tutorial")
 addlabel("Added Support: Fisch, TOH, Brookhaven", "Tutorial")
 
--- New Scripts
+-- Daily
 addbutton("Fisch - Speed Hub X", "New", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed%20Hub%20X.lua"))()
 end)
