@@ -36,6 +36,10 @@ addbutton("Nameless Admin", "Universal", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/FilteringEnabled/NamelessAdmin/main/Source"))()
 end)
 
+addbutton("Enable Reset Button", "Universal", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/px5XVSG0",true))()
+end)
+
 addbutton("MSPaint GUI", "Universal", function()
     loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/002c19202c9946e6047b0c6e0ad51f84.lua"))()
 end)
@@ -85,6 +89,16 @@ end)
 addbutton("FE Draw Chat", "FE", function()
     loadstring(game:HttpGet("https://pastebin.com/raw/q6WWVCKC"))()
 end)
+
+addbutton("FE Draw Chat AK_ADMIN -- E to toggle", "FE", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/AKadminlol/Chatdraw/refs/heads/main/Chattdraw"))()
+end)
+
+
+addbutton("Mogus Prompt", "FE", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Smartlightyear/MogusLancher/1aa0678ceccbcab856b9b7264e2b2cdfad829519/GitHubSourceCode.Lua"))()
+end)
+
 
 -- Credits
 addlabel("Created by MaxximusPrimal", "Credits")
