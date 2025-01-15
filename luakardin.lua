@@ -7,6 +7,7 @@ newtab("Universal")
 newtab("Games")
 newtab("FE")
 newtab("Credits")
+newtab("Bypassers")
 
 -- Tutorial Tab
 addlabel("Welcome to Vxly Hub V1.11", "Tutorial")
@@ -71,7 +72,7 @@ end)
 
 -- FE Scripts
 addbutton("FE Animation Pack", "FE", function()
-    loadstring(game:HttpGet("https://pastebin.com/raw/JBmKb36k"))()
+    loadstring(game:HttpGet("https://scriptblox.com/raw/Universal-Script-Fe-Silly-Animation-V4-22405"))()
 end)
 
 addbutton("FE Head Pack", "FE", function()
@@ -98,6 +99,16 @@ end)
 addbutton("Mogus Prompt", "FE", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Smartlightyear/MogusLancher/1aa0678ceccbcab856b9b7264e2b2cdfad829519/GitHubSourceCode.Lua"))()
 end)
+
+addbutton("FE MEMEY GOJO", "FE", function()
+        loadstring(game:HttpGet("https://scriptblox.com/raw/Universal-Script-Fe-Meme-Animation-R6-24167"))()
+    end)
+
+--bypasser tab
+addlabel("Bypassers", "Bypassers")
+addbutton("Chat Bypasser", "Bypassers", function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/FoxlinesTheRealOne/FoxlinesTheRealOne/refs/heads/main/Chat%20Bypass%20beta"))()
+    end)
 
 
 -- Credits
