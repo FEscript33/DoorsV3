@@ -50,7 +50,7 @@ Tab:AddButton({
 })
 wait(5)
       		game:GetService("StarterGui"):SetCore("SendNotification",{
-	Title = "Infinite", -- Required
+	Title = "Infinite Yield", -- Required
     Text = "Loaded!", -- Required
      Icon = "rbxassetid://15011943566" -- Optional
 })
