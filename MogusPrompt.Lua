@@ -39,6 +39,10 @@ local MovementTab = Window:MakeTab({
     PremiumOnly = false
 })
 
+local Section = MovementTab:AddSection({
+	Name = "FE"
+})
+
 MovementTab:AddSlider({
     Name = "Speed",
     Min = 1,
@@ -72,3 +76,16 @@ MovementTab:AddButton({
   	end    
 })
 
+MovementTab:AddButton({
+    Name = "FE Silly",
+    Callback = function()
+    loadstring(game:HttpGet("https://scriptblox.com/raw/Universal-Script-Silly-Fe-Nameless-Animation-V4-But-with-Less-Shake-24226"))()
+end
+})
+
+MovementTab:AddButton({
+    Name = "FE Fighter",
+    Callback = function()
+    loadstring(game:HttpGet("https://scriptblox.com/raw/Universal-Script-FE-Fighter-OPTIMIZED-VER-inspired-by-gale-24162"))()
+end
+})
