@@ -19,7 +19,7 @@ end
 
 local MainTab = Window:MakeTab({
     Name = "Main",
-    Icon = "rbxassetid://4483345998",
+    Icon = "rbxassetid://2530517466",
     PremiumOnly = false
 })
 
