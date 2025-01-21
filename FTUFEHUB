@@ -3,8 +3,8 @@ local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 local Window = Rayfield:CreateWindow({
    Name = "FTU Ultimate FE HUB",
    Icon = 123098334632821, -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
-   LoadingTitle = "Rayfield Interface Suite",
-   LoadingSubtitle = "by Sirius",
+   LoadingTitle = "FTU",
+   LoadingSubtitle = "by Smartlightyear & Lunar",
    Theme = "Default", -- Check https://docs.sirius.menu/rayfield/configuration/themes
 
    DisableRayfieldPrompts = false,
@@ -220,26 +220,6 @@ FETab:CreateButton({
         end
     end
 })
-
-FETab:CreateButton({
-    Name = "FE Mogus Prompt",
-    Callback = function()
-        local scriptURL = "https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"
-        local success, err = pcall(function()
-            local script = game:HttpGet(scriptURL)
-            loadstring(script)()
-        end)
-
-        if not success then
-            print("Failed to load script: " .. err)
-        end
-    end
-})
-
-
-
-
-
 
 local ConTab = Window:CreateTab("Config", 109523353085474)
 
