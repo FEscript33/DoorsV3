@@ -55,9 +55,9 @@ FETab:CreateButton({
 })
 
 FETab:CreateButton({
-    Name = "FE Goner Divine Edge",
+    Name = "FE jerk R15",
     Callback = function()
-        local scriptURL = "https://raw.githubusercontent.com/Fe-ProjectR/FE-Files/refs/heads/main/Fe%20Divine%20Edge.lua"
+        local scriptURL = "https://pastefy.app/YZoglOyJ/raw"
         local success, err = pcall(function()
             local script = game:HttpGet(scriptURL)
             loadstring(script)()
@@ -175,9 +175,9 @@ FETab:CreateButton({
 })
 
 FETab:CreateButton({
-    Name = "FE headless",
+    Name = "FE Anim Hub",
     Callback = function()
-        local scriptURL = "https://pastebin.com/raw/q6WWVCKC"
+        local scriptURL = "https://gist.githubusercontent.com/MelonsStuff/f018928d2f010789a150b4924e279b16/raw/8de399eb9cbccbde430fcd37270cd4ff171f8b8e/AnimationGUI.txt"
         local success, err = pcall(function()
             local script = game:HttpGet(scriptURL)
             loadstring(script)()
@@ -189,7 +189,7 @@ FETab:CreateButton({
     end
 })
 
-local Section = Tab:CreateSection("Other FE scripts")
+local Section = FETab:CreateSection("Other FE scripts")
 
 FETab:CreateButton({
     Name = "FE Touch Fling",
