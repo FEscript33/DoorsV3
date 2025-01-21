@@ -81,7 +81,7 @@ loadstring(game:HttpGet("https://pastebin.com/raw/1p6xnBNf"))()
 
 local Tab = Window:MakeTab({
 	Name = "BlackKing",
-	Icon = "rbxassetid://4483345998",
+	Icon = "rbxassetid://17652551345",
 	PremiumOnly = false
 })
 
@@ -97,10 +97,23 @@ BlackKingTab:AddButton({
 })
 
 BlackKingTab:AddButton({
-	Name = "DOORS",
+	Name = "DOORS but kinda short and cheap Mobile",
 	Callback = function()
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/Smartlightyear/DoorsV3/refs/heads/main/BlackKingXBobHub",true))()	
+     	loadstring(game:HttpGet("https://github.com/KINGHUB01/BlackKing-obf/blob/main/DOORS%20but%20kinda%20cheap%20and%20shorter%20%5BMobile%5D",true))()
 })
+
+BlackKingTab:AddButton({
+	Name = "DOORS but kinda short and cheap PC/Labtop/Mac",
+	Callback = function()
+     	loadstring(game:HttpGet("https://raw.githubusercontent.com/KINGHUB01/BlackKing-obf/refs/heads/main/DOORS%20but%20kinda%20cheap%20and%20shorter",true))()
+})
+
+BlackKingTab:AddButton({
+	Name = "DOORS but kinda short and cheap Mobile",
+	Callback = function()
+     	loadstring(game:HttpGet("https://raw.githubusercontent.com/KINGHUB01/BlackKing-obf/refs/heads/main/DOORS%20but%20kinda%20cheap%20and%20shorter",true))()
+})
+
 
 
 local Tab = Window:MakeTab({
@@ -130,3 +143,6 @@ wait(1)
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Sheeshablee73/Scriptss/main/RivalsUPD2.lua"))()
   	end    
 })
+
+
+
