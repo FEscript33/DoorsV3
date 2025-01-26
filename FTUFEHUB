@@ -130,6 +130,21 @@ FETab:CreateButton({
 })
 
 FETab:CreateButton({
+    Name = "FE Hug *H to toggle custom UI for mobile*",
+    Callback = function()
+        local scriptURL = "https://raw.githubusercontent.com/JSFKGBASDJKHIOAFHDGHIUODSGBJKLFGDKSB/fe/refs/heads/main/FEHUGG"
+        local success, err = pcall(function()
+            local script = game:HttpGet(scriptURL)
+            loadstring(script)()
+        end)
+
+        if not success then
+            print("Failed to load script: " .. err)
+        end
+    end
+})
+
+FETab:CreateButton({
     Name = "FE SCP - 096",
     Callback = function()
         local scriptURL = "https://pastefy.app/YsJgITXR/raw"
