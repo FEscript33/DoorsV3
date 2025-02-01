@@ -79,3 +79,59 @@ end -- put this after the create window crap
 ## Loadstring button for RayField P2,
 ```lua
 createScriptButton(YOURTABHERE, "BUTTON NAME HERE", "RAW LINK HERE")
+```
+## TP TO a Position
+```lua
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(0, 0, 0) --replace 0, 0, 0 with the position you want your character to move to, (x, Y, Z)
+```
+## NOCLIP, optimized for KAVO UI Lib,
+```lua
+local Players = game:GetService("Players")
+local RunService = game:GetService("RunService")
+local UserInputService = game:GetService("UserInputService")
+
+local player = Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+
+-- Noclip Script
+local noclipEnabled = false
+Section:NewToggle("Noclip", "Walk through walls", function(state) -- use this with replace this with the toggle you want,
+    noclipEnabled = state
+    if noclipEnabled then
+        RunService.Stepped:Connect(function()
+            if noclipEnabled and character then
+                for _, part in pairs(character:GetChildren()) do
+                    if part:IsA("BasePart") then
+                        part.CanCollide = false
+                    end
+                end
+            end
+        end)
+    end
+end)
+```
+## Infinite jump Toggle optimized for KAVO UI
+```lua
+-- Infinite Jump Toggle
+local infiniteJumpEnabled = false
+_G.JumpHeight = 50
+
+Section:NewToggle("Infinite Jump", "Toggle infinite jumping", function(state)
+    infiniteJumpEnabled = state
+end)
+
+UserInputService.InputBegan:Connect(function(UserInput)
+    if UserInput.UserInputType == Enum.UserInputType.Keyboard and UserInput.KeyCode == Enum.KeyCode.Space then
+        if infiniteJumpEnabled then
+            local humanoid = character:FindFirstChildOfClass("Humanoid")
+            if humanoid and (humanoid:GetState() == Enum.HumanoidStateType.Jumping or humanoid:GetState() == Enum.HumanoidStateType.Freefall) then
+                local rootPart = humanoid.Parent:FindFirstChild("HumanoidRootPart")
+                if rootPart then
+                    rootPart.Velocity = Vector3.new(0, _G.JumpHeight, 0)
+                end
+            end
+        end
+    end
+end)
+```
