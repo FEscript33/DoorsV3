@@ -136,6 +136,13 @@ UserInputService.InputBegan:Connect(function(UserInput)
     end
 end)
 ```
+## Loop Functions
+```lua
+while wait(5) do -- replace 5 with the time you want it to repeat
+    print("Hello") -- replace this with your fuction
+end
+```
+
 
 ## Print Functions
 prints
