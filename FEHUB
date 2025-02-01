@@ -3,9 +3,9 @@ local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 local Window = Rayfield:CreateWindow({
    Name = "FTU Ultimate FE HUB",
    Icon = 123098334632821, -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
-   LoadingTitle = "FTU",
+   LoadingTitle = "FTU X " .. game.Players.LocalPlayer.Name,
    LoadingSubtitle = "by Smartlightyear & Lunar",
-   Theme = "Default", -- Check https://docs.sirius.menu/rayfield/configuration/themes
+   Theme = "Amethyst", -- Check https://docs.sirius.menu/rayfield/configuration/themes
 
    DisableRayfieldPrompts = false,
    DisableBuildWarnings = false, -- Prevents Rayfield from warning when the script has a version mismatch with the interface
@@ -24,7 +24,7 @@ local Window = Rayfield:CreateWindow({
 
    KeySystem = true, -- Set this to true to use our key system
    KeySettings = {
-      Title = "FTU KEY SYSTEM",
+      Title = "FE Hub X " .. game.Players.LocalPlayer.Name,
       Subtitle = "Key System",
       Note = "Go to getkeyftu.netlify.app to Obtain your key.", -- Use this to tell the user how to get a key
       FileName = "Key", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
@@ -249,6 +249,20 @@ FETab:CreateButton({
     end
 })
 
+FETab:CreateButton({
+    Name = "FE Hawk Guy",
+    Callback = function()
+        local scriptURL = "https://pastefy.app/9O46YtFx/raw"
+        local success, err = pcall(function()
+            local script = game:HttpGet(scriptURL)
+            loadstring(script)()
+        end)
+
+        if not success then
+            print("Failed to load script: " .. err)
+        end
+    end
+
 local Section = FETab:CreateSection("Other FE scripts")
 
 FETab:CreateButton({
@@ -282,6 +296,8 @@ FETab:CreateButton({
 })
 
 local ConTab = Window:CreateTab("Config", 109523353085474)
+
+local Label = FETab:CreateLabel("FTU X " .. game.Players.LocalPlayer.Name, "rewind")
 
 local Button = ConTab:CreateButton({
    Name = "Unload",
