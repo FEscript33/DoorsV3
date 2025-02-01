@@ -1,1 +1,0 @@
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Smartlightyear/ExecutorScripts/refs/heads/main/Sythpazie",true))()
