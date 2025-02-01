@@ -136,3 +136,21 @@ UserInputService.InputBegan:Connect(function(UserInput)
     end
 end)
 ```
+
+## Print Functions
+prints
+
+## normal Messages
+```lua
+print("Txt here")
+```
+
+## Errors
+```lua
+error("Txt here")
+```
+
+## Warnings
+```lua
+warn("Txt here")
+```
