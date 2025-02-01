@@ -261,7 +261,7 @@ FETab:CreateButton({
         if not success then
             print("Failed to load script: " .. err)
         end
-    end
+    end})
 
 local Section = FETab:CreateSection("Other FE scripts")
 
