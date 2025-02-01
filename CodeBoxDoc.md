@@ -26,7 +26,8 @@ game.ReplicatedStorage.RandomEvent:FireServer() --replace RandomEVent with the e
 
  ## Running Loadstrings
 ```lua
---[[With different UI librarys you have to use a certain method to run the loadstrings like rayfield, but here is the normal way]]-- loadstring(game:HttpGet("Your  Raw link here",true))() 
+--[[With different UI librarys you have to use a certain method to run the loadstrings like rayfield, but here is the normal way]]--
+loadstring(game:HttpGet("Your  Raw link here",true))() 
 ```
  ## Running Loadstrings method 2
 ```lua
