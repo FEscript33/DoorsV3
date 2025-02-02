@@ -2,7 +2,7 @@ loadstring(game:HttpGet(('https://pastebin.com/wGdybj7s')))()
 
 
 
-Fixed By Lunar
+--Fixed By Lunar
 
 -- Issues
 - Unobsfucated Or Loadstringed (Can Be Skidded)
