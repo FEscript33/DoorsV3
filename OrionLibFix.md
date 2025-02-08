@@ -26,6 +26,18 @@ CloseCallback = <function> - Function to execute when the window is closed.
 ]]
 ```
 
+## Creating a Window with customizable Intro Text
+```lua
+local Window = OrionLib:MakeWindow({
+    Name = "Roblox Script", --name for the window
+    HidePremium = false,
+    SaveConfig = true, 
+    ConfigFolder = "OrionTest",
+    IntroText = "Roblox Script", --text
+    IntroIcon = "rbxassetid://4483345998", --ico for intro text
+    Icon = "rbxassetid://4483345998" -- ico for UI window
+})
+```
 
 
 ## Creating a Tab
