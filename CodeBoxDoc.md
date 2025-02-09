@@ -23,6 +23,10 @@ game.Players.LocalPlayer.Character.Humanoid.Health = 0 -- sadly trying to make t
 ```lua
 game.ReplicatedStorage.RandomEvent:FireServer() --replace RandomEVent with the event you wanna trigger.
 ```
+ ## Chat Message (Legacy)
+```lua
+game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents").SayMessageRequest:FireServer("Text Here", "All") --replace text here with your message, only change that
+```
 
  ## Running Loadstrings
 ```lua
