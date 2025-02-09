@@ -49,6 +49,16 @@ local scriptURL = "Your Script here"
 --[[makes you copy the place ID,]]--
 setclipboard(tostring(game.PlaceId))
 ```
+## Click on Click Detector
+```lua
+game.Workspace.FolderName.PartwithClickDetector.Random:Click() --Replace Random with you're click detector, replace Foldername, with the name of the folder its in, if not in a folder, just remove it, replace Partwithclickdector with the part the detectors located in
+```
+
+## TP To a pos then back
+```lua
+local p, c, h = game.Players.LocalPlayer, game.Players.LocalPlayer.Character or game.Players.LocalPlayer.CharacterAdded:Wait(), game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart") local o = h.Position; h.CFrame = CFrame.new(positionHere); wait(0); h.CFrame = CFrame.new(o) --replace positionHere with your position,
+
+```
 
  ## Notification
 ```lua
