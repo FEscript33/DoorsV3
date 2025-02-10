@@ -27,6 +27,10 @@ game.ReplicatedStorage.RandomEvent:FireServer() --replace RandomEVent with the e
 ```lua
 game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents").SayMessageRequest:FireServer("Text Here", "All") --replace text here with your message, only change that
 ```
+## Chat Message (TextChatService)
+```lua
+game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("Message goes here!")
+```
 
  ## Running Loadstrings
 ```lua
