@@ -32,6 +32,11 @@ game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents")
 game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("Message goes here!")
 ```
 
+## Repeat Function
+```lua
+for i=1,5 do print("Replace the print with ur command") task.wait(0) end
+```
+
  ## Running Loadstrings
 ```lua
 --[[With different UI librarys you have to use a certain method to run the loadstrings like rayfield, but here is the normal way]]--
