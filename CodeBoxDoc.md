@@ -2,7 +2,10 @@
 Documentation
 
 ## Update:
-This is where we show you simple functions that can help you code
+I'm to lazy to really do this stuff so enjoy
+
+## Loadstring Generator
+https://lgenorator.netlify.app/
 
 ## WalkSpeed
 ```lua
@@ -36,10 +39,7 @@ game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("Message go
 ```lua
 for i=1,5 do print("Replace the print with ur command") task.wait(0) end
 ```
-## Loadstring Generator
-```lua
-https://lgenorator.netlify.app/ --go here to make loadstrings
-```
+
 
  ## Running Loadstrings
 ```lua
@@ -113,57 +113,12 @@ createScriptButton(YOURTABHERE, "BUTTON NAME HERE", "RAW LINK HERE")
 ```lua
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(0, 0, 0) --replace 0, 0, 0 with the position you want your character to move to, (x, Y, Z)
 ```
-## NOCLIP, optimized for KAVO UI Lib,
+## NOCLIP toggle,
 ```lua
-local Players = game:GetService("Players")
-local RunService = game:GetService("RunService")
-local UserInputService = game:GetService("UserInputService")
-
-local player = Players.LocalPlayer
-local character = player.Character or player.CharacterAdded:Wait()
-local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
-
--- Noclip Script
-local noclipEnabled = false
-Section:NewToggle("Noclip", "Walk through walls", function(state) -- use this with replace this with the toggle you want,
-    noclipEnabled = state
-    if noclipEnabled then
-        RunService.Stepped:Connect(function()
-            if noclipEnabled and character then
-                for _, part in pairs(character:GetChildren()) do
-                    if part:IsA("BasePart") then
-                        part.CanCollide = false
-                    end
-                end
-            end
-        end)
-    end
-end)
+game:GetService("RunService").Stepped:Connect(function() if Value then for _, part in pairs(game.Players.LocalPlayer.Character:GetChildren()) do if part:IsA("BasePart") then part.CanCollide = false end end end end)
 ```
-## Infinite jump Toggle optimized for KAVO UI
-```lua
--- Infinite Jump Toggle
-local infiniteJumpEnabled = false
-_G.JumpHeight = 50
+Replace Value with your callback function value,
 
-Section:NewToggle("Infinite Jump", "Toggle infinite jumping", function(state)
-    infiniteJumpEnabled = state
-end)
-
-UserInputService.InputBegan:Connect(function(UserInput)
-    if UserInput.UserInputType == Enum.UserInputType.Keyboard and UserInput.KeyCode == Enum.KeyCode.Space then
-        if infiniteJumpEnabled then
-            local humanoid = character:FindFirstChildOfClass("Humanoid")
-            if humanoid and (humanoid:GetState() == Enum.HumanoidStateType.Jumping or humanoid:GetState() == Enum.HumanoidStateType.Freefall) then
-                local rootPart = humanoid.Parent:FindFirstChild("HumanoidRootPart")
-                if rootPart then
-                    rootPart.Velocity = Vector3.new(0, _G.JumpHeight, 0)
-                end
-            end
-        end
-    end
-end)
-```
 ## Loop Functions
 ```lua
 while wait(5) do -- replace 5 with the time you want it to repeat
@@ -195,6 +150,11 @@ game:GetService("StarterGui"):SetCore("SendNotification", {
     Duration = 2
 })
 ```
+here is the short choppy version if you wanna use this without the notification,
+```lua
+game:GetService("UserInputService").JumpRequest:Connect(function() if Value then game:GetService("Players").LocalPlayer.Character:FindFirstChildOfClass('Humanoid'):ChangeState("Jumping") end end)
+```
+Replace Value with your callback function value
 
 
 
@@ -202,6 +162,19 @@ game:GetService("StarterGui"):SetCore("SendNotification", {
 
 ```lua
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Players"):GetPlayers()[table.find(game:GetService("Players"):GetPlayers(), function(p) return p.DisplayName:lower() == "TARGET_DISPLAY_NAME":lower() end) or 1].Character.HumanoidRootPart.CFrame
+```
+here is an example on how to use it in a UI library, this is rayfield
+```lua
+local Tab = Window:CreateTab("Player", 4483362458)
+local Dropdown = Tab:CreateDropdown({
+   Name = "Select Player",
+   Options = players,
+   CurrentOption = "",
+   Flag = "Dropdown1",
+   Callback = function(Value)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Players"):GetPlayers()[table.find(game:GetService("Players"):GetPlayers(), function(p) return p.DisplayName:lower() == Value:lower() end) or 1].Character.HumanoidRootPart.CFrame
+   end,
+})
 ```
 
 ## Change Roblox Mouse Cursor
