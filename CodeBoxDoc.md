@@ -36,6 +36,10 @@ game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("Message go
 ```lua
 for i=1,5 do print("Replace the print with ur command") task.wait(0) end
 ```
+## Loadstring Generator
+```lua
+https://lgenorator.netlify.app/ --go here to make loadstrings
+```
 
  ## Running Loadstrings
 ```lua
