@@ -7,11 +7,23 @@ I'm to lazy to really do this stuff so enjoy
 ## Loadstring Generator
 https://lgenorator.netlify.app/
 
+## Color Wheel RGB
+https://rgcolorpicker.netlify.app/
+
+
 ## WalkSpeed
 ```lua
 game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value --if you were using a UI lib Value would represent the speed, can be used for sliders, but if you want the speed in personal just replace value with a number
 ```
-
+## LoopWalkSpeed
+let's say you get harrased by anticheat, this is the key
+```lua
+RunService.Heartbeat:Connect(function()
+    if Value then
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 50
+    end
+end)
+```
 ## JumpPower
 ```lua
 game.Players.LocalPlayer.Character.Humanoid.JumpPower = Value --if you were using a UI lib Value would represent the JumpPower, can be used for sliders, but if you want the jumppower in personal just replace value with a number
@@ -115,11 +127,36 @@ game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(0, 0, 0)
 ```
 ## NOCLIP toggle,
 ```lua
+local NoclipEnabled = false
+if not _G.NoclipStarted then
+    _G.NoclipStarted = true
+    game:GetService("RunService").Stepped:Connect(function()
+        if NoclipEnabled then
+            for _, part in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+                if part:IsA("BasePart") then
+                    part.CanCollide = false
+                end
+            end
+        end
+    end)
+end
+
+NoclipEnabled = not NoclipEnabled
+game:GetService("StarterGui"):SetCore("SendNotification", {
+    Title = "Noclip",
+    Text = NoclipEnabled and "Enabled" or "Disabled",
+    Duration = 2
+})
+```
+Version optimized for UI libraries
+```lua
 game:GetService("RunService").Stepped:Connect(function() if Value then for _, part in pairs(game.Players.LocalPlayer.Character:GetChildren()) do if part:IsA("BasePart") then part.CanCollide = false end end end end)
 ```
 Replace Value with your callback function value,
 
 ## Loop Functions
+
+
 ```lua
 while wait(5) do -- replace 5 with the time you want it to repeat
     print("Hello") -- replace this with your fuction
@@ -156,7 +193,46 @@ game:GetService("UserInputService").JumpRequest:Connect(function() if Value then
 ```
 Replace Value with your callback function value
 
+## ESP TOGGlE
+version for UI libs
+```lua
+game:GetService("RunService").RenderStepped:Connect(function() if Value then for _,v in pairs(game.Players:GetPlayers()) do if v ~= game.Players.LocalPlayer and v.Character and v.Character:FindFirstChild("HumanoidRootPart") then if not v.Character.HumanoidRootPart:FindFirstChild("ESP") then local ESP = Instance.new("BillboardGui", v.Character.HumanoidRootPart) ESP.Name = "ESP" ESP.Size = UDim2.new(4,0,5.5,0) ESP.AlwaysOnTop = true local TextLabel = Instance.new("TextLabel", ESP) TextLabel.Text = v.Name TextLabel.TextColor3 = Color3.fromRGB(255,0,0) TextLabel.Size = UDim2.new(1,0,1,0) TextLabel.BackgroundTransparency = 1 end v.Character.HumanoidRootPart.ESP.Enabled = true end end end end)
+```
+If you wanna use the simple version with the toggle here
+```lua
+local ESPEnabled = false
+if not _G.ESPStarted then
+    _G.ESPStarted = true
+    game:GetService("RunService").RenderStepped:Connect(function()
+        if ESPEnabled then
+            for _,v in pairs(game.Players:GetPlayers()) do
+                if v ~= game.Players.LocalPlayer and v.Character and v.Character:FindFirstChild("HumanoidRootPart") then
+                    if not v.Character.HumanoidRootPart:FindFirstChild("ESP") then
+                        local ESP = Instance.new("BillboardGui", v.Character.HumanoidRootPart)
+                        ESP.Name = "ESP"
+                        ESP.Size = UDim2.new(4,0,5.5,0)
+                        ESP.AlwaysOnTop = true
+                        local TextLabel = Instance.new("TextLabel", ESP)
+                        TextLabel.Text = v.Name
+                        TextLabel.TextColor3 = Color3.fromRGB(255,0,0)
+                        TextLabel.Size = UDim2.new(1,0,1,0)
+                        TextLabel.BackgroundTransparency = 1
+                    end
+                    v.Character.HumanoidRootPart.ESP.Enabled = true
+                end
+            end
+        end
+    end)
+end
 
+ESPEnabled = not ESPEnabled
+game:GetService("StarterGui"):SetCore("SendNotification", {
+    Title = "ESP",
+    Text = ESPEnabled and "Enabled" or "Disabled",
+    Duration = 2
+})
+
+```
 
 ## Teleport to Player
 
