@@ -201,14 +201,7 @@ game:GetService("StarterGui"):SetCore("SendNotification", {
 ## Teleport to Player
 
 ```lua
-local function TeleportToPlayer(targetPlayer)
-    local player = game.Players.LocalPlayer
-    local target = game.Players:FindFirstChild(targetPlayer)
-    
-    if target then
-        player.Character.HumanoidRootPart.CFrame = target.Character.HumanoidRootPart.CFrame
-    end
-end
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Players"):GetPlayers()[table.find(game:GetService("Players"):GetPlayers(), function(p) return p.DisplayName:lower() == "TARGET_DISPLAY_NAME":lower() end) or 1].Character.HumanoidRootPart.CFrame
 ```
 
 ## Change Roblox Mouse Cursor
