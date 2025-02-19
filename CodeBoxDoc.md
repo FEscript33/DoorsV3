@@ -78,11 +78,12 @@ local p, c, h = game.Players.LocalPlayer, game.Players.LocalPlayer.Character or 
 ```
 
  ## Notification
+goto https://create.roblox.com/dashboard/creations?activeTab=Image and get a Image NOT DECAL!
 ```lua
 game:GetService("StarterGui"):SetCore("SendNotification",{
 	Title = "Notification", -- Required
 	Text = "Your Txt", -- Required
-	Icon = "rbxassetid://" -- Optional, now if you wannna add a icon, go to https://create.roblox.com/dashboard/creations?activeTab=Image and get a Image NOT DECAL!
+	Icon = "rbxassetid://" -- Optional,
 })
 ```
 
@@ -168,6 +169,53 @@ end)
 while wait(5) do -- replace 5 with the time you want it to repeat
     print("Hello") -- replace this with your fuction
 end
+```
+
+## Infinity Jump
+Do NOT worry it will toggle and untoggle when you run the script
+```lua
+local InfiniteJumpEnabled = false
+local UserInputService = game:GetService("UserInputService")
+
+if not _G.InfiniteJumpStarted then
+    _G.InfiniteJumpStarted = true
+    
+    UserInputService.JumpRequest:Connect(function()
+        if InfiniteJumpEnabled then
+            game:GetService("Players").LocalPlayer.Character:FindFirstChildOfClass('Humanoid'):ChangeState("Jumping")
+        end
+    end)
+end
+
+-- Toggle the current state
+InfiniteJumpEnabled = not InfiniteJumpEnabled
+game:GetService("StarterGui"):SetCore("SendNotification", {
+    Title = "Infinite Jump",
+    Text = InfiniteJumpEnabled and "Enabled" or "Disabled",
+    Duration = 2
+})
+```
+
+
+
+## Teleport to Player
+
+```lua
+local function TeleportToPlayer(targetPlayer)
+    local player = game.Players.LocalPlayer
+    local target = game.Players:FindFirstChild(targetPlayer)
+    
+    if target then
+        player.Character.HumanoidRootPart.CFrame = target.Character.HumanoidRootPart.CFrame
+    end
+end
+```
+
+## Change Roblox Mouse Cursor
+get images from the toolbox on roblox studio or here from your library https://create.roblox.com/dashboard/creations?activeTab=Image and get a Image NOT DECAL!
+```lua
+local mouse = game.Players.LocalPlayer:GetMouse()
+mouse.Icon = "rbxassetid://123456789" -- Replace with cursor image ID
 ```
 
 
