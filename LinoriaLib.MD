@@ -123,7 +123,19 @@ MenuGroup:AddLabel('Menu bind'):AddKeyPicker('MenuKeybind', {
 
 Library.ToggleKeybind = Options.MenuKeybind
 ```
+## Unload button
+```lua
+local MenuGroup = Tabs['UI Settings']:AddLeftGroupbox('Menu')
+MenuGroup:AddButton('Unload UI', function() 
+    Library:Unload() 
+end)
 
+-- Optional
+Library:OnUnload(function()
+    print('UI has been unloaded!')
+    Library.Unloaded = true
+end)
+```
 
 ## Theme Management
 ```lua:theme_management.lua
