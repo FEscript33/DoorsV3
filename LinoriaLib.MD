@@ -70,6 +70,12 @@ LeftGroupBox:AddSlider('MySlider', {
 })
 ```
 
+### Notifications
+Change 2 with the ammount of time the notification will last
+```lua:elements/Notification.lua
+Library:Notify("Complete!", 2) 
+```
+
 ### Dropdowns
 ```lua:elements/dropdown.lua
 LeftGroupBox:AddDropdown('MyDropdown', {
@@ -105,6 +111,19 @@ SaveManager:SetFolder('MyScriptHub/specific-game')
 SaveManager:BuildConfigSection(Tabs['UI Settings'])
 SaveManager:LoadAutoloadConfig()
 ```
+## Menu Bind
+```lua:Menubind.lua
+local MenuGroup = Tabs['UI Settings']:AddLeftGroupbox('Menu')
+
+MenuGroup:AddLabel('Menu bind'):AddKeyPicker('MenuKeybind', { 
+    Default = 'End', 
+    NoUI = true, 
+    Text = 'Menu keybind' 
+})
+
+Library.ToggleKeybind = Options.MenuKeybind
+```
+
 
 ## Theme Management
 ```lua:theme_management.lua
