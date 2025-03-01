@@ -1,4 +1,4 @@
-# Linoria UI Library Documentation
+# Linoria Rewrite UI Library Documentation
 
 A comprehensive UI library for Roblox with theme management and configuration saving capabilities.
 
