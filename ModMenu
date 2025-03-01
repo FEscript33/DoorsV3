@@ -1,0 +1,242 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ModMenu = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local Title = Instance.new("TextLabel")
+local SpeedHack = Instance.new("TextButton")
+local JumpHack = Instance.new("TextButton")
+local FlyHack = Instance.new("TextButton")
+local Helicopter = Instance.new("TextButton")
+local TouchFling = Instance.new("TextButton")
+local NoclipHack = Instance.new("TextButton")
+local ImageLabel = Instance.new("ImageLabel")
+local Unload = Instance.new("TextButton")
+
+--Properties:
+
+ModMenu.Name = "ModMenu"
+ModMenu.Parent = game.CoreGui
+ModMenu.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+ModMenu.Enabled = true
+
+Frame.Parent = ModMenu
+Frame.BackgroundColor3 = Color3.fromRGB(7, 0, 100)
+Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(0.0228571426, 0, 0.274271846, 0)
+Frame.Size = UDim2.new(0, 238, 0, 276)
+Frame.Active = true
+Frame.Draggable = true
+
+
+Title.Name = "Title"
+Title.Parent = Frame
+Title.BackgroundColor3 = Color3.fromRGB(0, 0, 67)
+Title.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Title.BorderSizePixel = 0
+Title.Size = UDim2.new(0, 238, 0, 38)
+Title.Font = Enum.Font.Nunito
+Title.Text = "Mod Menu"
+Title.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title.TextScaled = true
+Title.TextSize = 14.000
+Title.TextWrapped = true
+
+SpeedHack.Name = "SpeedHack"
+SpeedHack.Parent = Frame
+SpeedHack.BackgroundColor3 = Color3.fromRGB(0, 0, 122)
+SpeedHack.BorderColor3 = Color3.fromRGB(0, 0, 0)
+SpeedHack.BorderSizePixel = 0
+SpeedHack.Position = UDim2.new(0.0798319355, 0, 0.195652172, 0)
+SpeedHack.Size = UDim2.new(0, 55, 0, 50)
+SpeedHack.Font = Enum.Font.SourceSans
+SpeedHack.Text = "SpeedHack"
+SpeedHack.TextColor3 = Color3.fromRGB(255, 255, 255)
+SpeedHack.TextScaled = true
+SpeedHack.TextSize = 14.000
+SpeedHack.TextWrapped = true
+
+JumpHack.Name = "JumpHack"
+JumpHack.Parent = Frame
+JumpHack.BackgroundColor3 = Color3.fromRGB(0, 0, 122)
+JumpHack.BorderColor3 = Color3.fromRGB(0, 0, 0)
+JumpHack.BorderSizePixel = 0
+JumpHack.Position = UDim2.new(0.382352948, 0, 0.195652172, 0)
+JumpHack.Size = UDim2.new(0, 55, 0, 50)
+JumpHack.Font = Enum.Font.SourceSans
+JumpHack.Text = "JumpHack"
+JumpHack.TextColor3 = Color3.fromRGB(255, 255, 255)
+JumpHack.TextScaled = true
+JumpHack.TextSize = 14.000
+JumpHack.TextWrapped = true
+
+FlyHack.Name = "FlyHack"
+FlyHack.Parent = Frame
+FlyHack.BackgroundColor3 = Color3.fromRGB(0, 0, 122)
+FlyHack.BorderColor3 = Color3.fromRGB(0, 0, 0)
+FlyHack.BorderSizePixel = 0
+FlyHack.Position = UDim2.new(0.70168066, 0, 0.195652172, 0)
+FlyHack.Size = UDim2.new(0, 55, 0, 50)
+FlyHack.Font = Enum.Font.SourceSans
+FlyHack.Text = "Fly Hack"
+FlyHack.TextColor3 = Color3.fromRGB(255, 255, 255)
+FlyHack.TextScaled = true
+FlyHack.TextSize = 14.000
+FlyHack.TextWrapped = true
+
+Helicopter.Name = "Helicopter"
+Helicopter.Parent = Frame
+Helicopter.BackgroundColor3 = Color3.fromRGB(0, 0, 122)
+Helicopter.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Helicopter.BorderSizePixel = 0
+Helicopter.Position = UDim2.new(0.0798319355, 0, 0.409420282, 0)
+Helicopter.Size = UDim2.new(0, 55, 0, 50)
+Helicopter.Font = Enum.Font.SourceSans
+Helicopter.Text = "Helicopter"
+Helicopter.TextColor3 = Color3.fromRGB(255, 255, 255)
+Helicopter.TextScaled = true
+Helicopter.TextSize = 14.000
+Helicopter.TextWrapped = true
+
+TouchFling.Name = "TouchFling"
+TouchFling.Parent = Frame
+TouchFling.BackgroundColor3 = Color3.fromRGB(0, 0, 122)
+TouchFling.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TouchFling.BorderSizePixel = 0
+TouchFling.Position = UDim2.new(0.382352948, 0, 0.409420282, 0)
+TouchFling.Size = UDim2.new(0, 55, 0, 50)
+TouchFling.Font = Enum.Font.SourceSans
+TouchFling.Text = "Touch Fling "
+TouchFling.TextColor3 = Color3.fromRGB(255, 255, 255)
+TouchFling.TextScaled = true
+TouchFling.TextSize = 14.000
+TouchFling.TextWrapped = true
+
+NoclipHack.Name = "NoclipHack"
+NoclipHack.Parent = Frame
+NoclipHack.BackgroundColor3 = Color3.fromRGB(0, 0, 122)
+NoclipHack.BorderColor3 = Color3.fromRGB(0, 0, 0)
+NoclipHack.BorderSizePixel = 0
+NoclipHack.Position = UDim2.new(0.70168066, 0, 0.409420282, 0)
+NoclipHack.Size = UDim2.new(0, 55, 0, 50)
+NoclipHack.Font = Enum.Font.SourceSans
+NoclipHack.Text = "Noclip Hack "
+NoclipHack.TextColor3 = Color3.fromRGB(255, 255, 255)
+NoclipHack.TextScaled = true
+NoclipHack.TextSize = 14.000
+NoclipHack.TextWrapped = true
+
+ImageLabel.Parent = Frame
+ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel.BackgroundTransparency = 1.000
+ImageLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ImageLabel.BorderSizePixel = 0
+ImageLabel.Position = UDim2.new(0.827731073, 0, 0, 0)
+ImageLabel.Size = UDim2.new(0, 41, 0, 38)
+ImageLabel.Image = "http://www.roblox.com/asset/?id=121804566384135"
+
+Unload.Name = "Unload"
+Unload.Parent = Frame
+Unload.BackgroundColor3 = Color3.fromRGB(0, 0, 122)
+Unload.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Unload.BorderSizePixel = 2
+Unload.Position = UDim2.new(0.0798319355, 0, 0.739130437, 0)
+Unload.Size = UDim2.new(0, 203, 0, 50)
+Unload.Font = Enum.Font.SourceSans
+Unload.Text = "Unload"
+Unload.TextColor3 = Color3.fromRGB(255, 255, 255)
+Unload.TextScaled = true
+Unload.TextSize = 14.000
+Unload.TextWrapped = true
+
+SpeedHack.MouseButton1Click:Connect(function()
+	game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 100
+end)
+
+JumpHack.MouseButton1Click:Connect(function()
+	local InfiniteJumpEnabled = false
+	local UserInputService = game:GetService("UserInputService")
+
+	if not _G.InfiniteJumpStarted then
+		_G.InfiniteJumpStarted = true
+
+		UserInputService.JumpRequest:Connect(function()
+			if InfiniteJumpEnabled then
+				game:GetService("Players").LocalPlayer.Character:FindFirstChildOfClass('Humanoid'):ChangeState("Jumping")
+			end
+		end)
+	end
+
+	-- Toggle the current state
+	InfiniteJumpEnabled = not InfiniteJumpEnabled
+	game:GetService("StarterGui"):SetCore("SendNotification", {
+		Title = "Infinite Jump",
+		Text = InfiniteJumpEnabled and "Enabled" or "Disabled",
+		Duration = 2
+	})
+end)
+
+FlyHack.MouseButton1Click:Connect(function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/XNEOFF/FlyGuiV3/main/FlyGuiV3.txt"))()
+end)
+
+Helicopter.MouseButton1Click:Connect(function()
+	while wait() do game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame *= CFrame.Angles(0, math.rad(99), 0) end
+end)
+
+TouchFling.MouseButton1Click:Connect(function()
+	loadstring(game:HttpGet("https://pastebin.com/raw/AMs9e0Fu"))()
+end)
+
+NoclipHack.MouseButton1Click:Connect(function()
+	local NoclipEnabled = false
+	if not _G.NoclipStarted then
+		_G.NoclipStarted = true
+		game:GetService("RunService").Stepped:Connect(function()
+			if NoclipEnabled then
+				for _, part in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+					if part:IsA("BasePart") then
+						part.CanCollide = false
+					end
+				end
+			end
+		end)
+	end
+
+	NoclipEnabled = not NoclipEnabled
+	game:GetService("StarterGui"):SetCore("SendNotification", {
+		Title = "Noclip",
+		Text = NoclipEnabled and "Enabled" or "Disabled",
+		Duration = 2
+	})
+end)
+
+NoclipHack.MouseButton1Click:Connect(function()
+	local NoclipEnabled = false
+	if not _G.NoclipStarted then
+		_G.NoclipStarted = true
+		game:GetService("RunService").Stepped:Connect(function()
+			if NoclipEnabled then
+				for _, part in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+					if part:IsA("BasePart") then
+						part.CanCollide = false
+					end
+				end
+			end
+		end)
+	end
+
+	NoclipEnabled = not NoclipEnabled
+	game:GetService("StarterGui"):SetCore("SendNotification", {
+		Title = "Noclip",
+		Text = NoclipEnabled and "Enabled" or "Disabled",
+		Duration = 2
+	})
+end)
+
+Unload.MouseButton1Click:Connect(function()
+	ModMenu:Destroy()
+end)
