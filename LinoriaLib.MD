@@ -69,6 +69,20 @@ LeftGroupBox:AddSlider('MySlider', {
     Compact = false
 })
 ```
+With callback function:
+```lua
+LeftGroupBox:AddSlider('MySlider', {
+    Text = 'Slider',
+    Default = 0,
+    Min = 0,
+    Max = 5,
+    Rounding = 1,
+    Compact = false
+    Callback = function(Value)
+        print(Value)
+})
+```
+
 
 ### Notifications
 Change 2 with the ammount of time the notification will last
