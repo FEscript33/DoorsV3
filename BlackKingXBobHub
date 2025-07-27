@@ -1,6 +1,6 @@
 game:GetService("StarterGui"):SetCore("SendNotification",{
 	Title = "Notification",
-	Text = "Thank you for using Blackking X Bob Hub, Go use new btw!",
+	Text = "join the dc or i will shall come to your house and wiggle ur balls",
 	Icon = "rbxassetid://109523353085474"
 })
 loadstring(game:HttpGet("https://raw.githubusercontent.com/DarkDoorsKing/Doors/main/Main"))()
