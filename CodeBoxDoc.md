@@ -1,8 +1,8 @@
-# CodeBox by Smartlightyear/Kardin
+# CodeBox by Smartlightyear/Kardin - & Lunar
 Documentation
 
 ## Update:
-I'm to lazy to really do this stuff so enjoy
+I'm to lazy to really do this stuff so enjoy - join the dc or i will come and shaggle your balls
 
 ## Loadstring Generator
 https://lgenorator.netlify.app/
