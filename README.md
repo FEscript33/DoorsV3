@@ -1,6 +1,6 @@
-YOUR EXPLOITING KING IS BACK - MoreCheatz
 
-## Try our Russian Roulette Simulator
+
+## Try Smartlightyear's Russian Roulette Simulator
 **https://russianroulettesim.netlify.app/**
 
 ## Other fun games
